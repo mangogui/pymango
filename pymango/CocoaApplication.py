@@ -1,10 +1,10 @@
 from ctypes import c_void_p
 
-from Lib import LibMango
+from .Lib import LibMango
 
 
 class CocoaApplication(object):
-    def __init__(self):
+    def __init__(self) -> None:
         LibMango.CocoaApplication_create.argtypes = []
         LibMango.CocoaApplication_create.restype = c_void_p
 

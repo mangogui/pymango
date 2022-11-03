@@ -1,5 +1,5 @@
-from CocoaApplication import CocoaApplication
-from CocoaWindow import CocoaWindow
+from pymango import CocoaApplication
+from pymango import CocoaWindow
 
 if __name__ == "__main__":
 

@@ -1,10 +1,10 @@
 from ctypes import c_void_p, c_char_p
 
-from Lib import LibMango
+from .Lib import LibMango
 
 
 class CocoaWindow(object):
-    def __init__(self):
+    def __init__(self) -> None:
         LibMango.CocoaWindow_create.argtypes = []
         LibMango.CocoaWindow_create.restype = c_void_p
 
