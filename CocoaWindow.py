@@ -1,5 +1,4 @@
-import ctypes
-from  ctypes import c_void_p, c_char_p
+from ctypes import c_void_p, c_char_p
 
 from Lib import LibMango
 
