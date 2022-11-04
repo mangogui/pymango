@@ -38,7 +38,7 @@ class CocoaWindow(object):
         return LibMango.CocoaWindow_windowTitle(self.obj)
 
     def setWindowTitle(self, title: str) -> None:
-        return LibMango.CocoaWindow_setWindowTitle(self.obj, title.encode('ASCII'))
+        return LibMango.CocoaWindow_setWindowTitle(self.obj, title.encode('utf-8'))
 
     def maximize(self) -> None:
         return LibMango.CocoaWindow_maximize(self.obj)
