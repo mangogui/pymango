@@ -20,6 +20,12 @@ class CocoaWindow(object):
         LibMango.CocoaWindow_setWindowTitle.argtypes = [c_void_p, c_char_p]
         LibMango.CocoaWindow_setWindowTitle.restype = c_void_p
 
+        LibMango.CocoaWindow_maximize.argtypes = [c_void_p]
+        LibMango.CocoaWindow_maximize.restype = c_void_p
+
+        LibMango.CocoaWindow_fullscreen.argtypes = [c_void_p]
+        LibMango.CocoaWindow_fullscreen.restype = c_void_p
+
         self.obj = LibMango.CocoaWindow_create()
 
     def center(self) -> None:
@@ -33,3 +39,9 @@ class CocoaWindow(object):
 
     def setWindowTitle(self, title: str) -> None:
         return LibMango.CocoaWindow_setWindowTitle(self.obj, bytes(title))
+
+    def maximize(self) -> None:
+        return LibMango.CocoaWindow_maximize(self.obj)
+
+    def fullscreen(self) -> None:
+        return LibMango.CocoaWindow_fullscreen(self.obj)
