@@ -8,6 +8,5 @@ if __name__ == "__main__":
     window = CocoaWindow()
     window.center()
     window.display()
-    window.setWindowTitle("Parham")
 
     application.run()
